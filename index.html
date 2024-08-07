@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Outlet_Establishment_Year</h3>
+            <input id="first" name="Outlet_Establishment_Year" type="number ">
+            <h3>What is the Weight of the Item?</h3><br><input id="second" name="Item_Weight" required="required">git
+            <h3>What is the item fat content?</h3><input id="third" name="Item_Fat_Content" required="required">
+                <option value="Regular">Regular</option>
+                <option value="Low Fat">Low Fat</option>
+            <h3>What is the visibilty of the item?</h3><br><input id="fourth" name="Item_Visibility" required="required">
+            <h3>What is the MRP of the item?</h3><br><input id="fourth" name="Item_MRP" required="required">
+            <h3>What Is the Outlet Size type?</h3><br><select name="Outlet_Size" id="Size" required="required">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <h3>What is the Outlet Location Type?</h3><br><select name="Outlet_Location_Type" id="Location" required="required">
+                <option value="Tier 1">Tier 1</option>
+                <option value="Tier 2">Tier 2</option>
+                <option value="Tier 3">Tier 3</option>
+            </select>
+            <h3>What is the Outlet Type?</h3><br><select name="Outlet_Type" id="Type" required="required">
+                <option value="Grocery Store">Grocery Store</option>
+                <option value="Supermarket Type1">Supermarket Type1</option>
+                <option value="Supermarket Type2">Supermarket Type2</option>
+                <option value="Supermarket Type3">Supermarket Type3</option>
+            </select>
+            <h3>What is the Item Type?</h3><br><select name="Item_Type_Baking_Goods" id="Type" required="required">
+                <option value="Baking Goods">Baking Goods</option>
+                <option value="Breads">Breads</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Canned">Canned</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Frozen Foods">Frozen Foods</option>
+                <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+                <option value="Hard Drinks">Hard Drinks</option>
+                <option value="Health and Hygiene">Health and Hygiene</option>
+                <option value="Household">Household</option>
+                <option value="Meat">Meat</option>
+                <option value="Others">Others</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Snack Foods">Snack Foods</option>
+                <option value="Soft Drinks">Soft Drinks</option>
+                <option value="Starchy Foods">Starchy Foods</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
